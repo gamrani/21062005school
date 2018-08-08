@@ -1,0 +1,17 @@
+package com.school.api.batchs;
+
+import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
+import com.school.api.entities.Line;
+public class RWFile {
+
+	private CSVReader cvsReader;
+	private CSVWriter csvWriter;
+	
+	
+	public Line readLine() {
+	
+		
+	 return null;
+	}
+}

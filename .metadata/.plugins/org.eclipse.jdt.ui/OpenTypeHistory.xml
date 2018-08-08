@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=api/src\/main\/java&lt;com.school.api.entities{User.java[User" modifiers="1" timestamp="1533412928000"/>
+    <typeInfo handle="=api/\/home\/gamranov\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.0.9.RELEASE\/spring-data-jpa-2.0.9.RELEASE.jar&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1533402866000"/>
+    <typeInfo handle="=api/\/home\/gamranov\/.m2\/repository\/org\/springframework\/batch\/spring-batch-core\/4.0.1.RELEASE\/spring-batch-core-4.0.1.RELEASE.jar&lt;org.springframework.batch.core.step.tasklet(Tasklet.class[Tasklet" modifiers="1537" timestamp="1533403833000"/>
+    <typeInfo handle="=api/\/usr\/lib\/jvm\/java-11-openjdk-amd64\/lib\/jrt-fs.jar`java.base&lt;java.io(Serializable.class[Serializable" modifiers="1537" timestamp="1524318087000"/>
+</typeInfoHistroy>

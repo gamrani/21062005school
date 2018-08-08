@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.school.api.batchs.LInesProcessor&apos; to &apos;LinesProcessor&apos;&#x0A;- Original project: &apos;api&apos;&#x0A;- Original element: &apos;com.school.api.batchs.LInesProcessor&apos;&#x0A;- Renamed element: &apos;com.school.api.batchs.LinesProcessor&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;LInesProcessor&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.school.api.batchs{LInesProcessor.java[LInesProcessor" matchStrategy="1" name="LinesProcessor" qualified="false" references="true" similarDeclarations="false" stamp="1533584361424" textual="false" version="1.0"/>
+</session>

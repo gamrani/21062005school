@@ -1,0 +1,60 @@
+<br>
+<div>
+  <span> 
+    <mat-form-field class="example-form-field">
+       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Chercher un étudiant par mot clé">
+    </mat-form-field>
+  </span>
+ <span id="add">
+  <button mat-stroked-button color="primary" (click)="openStudentForm()">
+     <i class="material-icons">person_add</i>
+    Ajouter un étudiant
+  </button>
+  &nbsp;
+  <button mat-stroked-button color="primary">
+     <i class="material-icons">group_add</i>
+     Importer des étudiants
+  </button>
+ </span>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> Id </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="email">
+      <th mat-header-cell *matHeaderCellDef> Email </th>
+      <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="tel">
+      <th mat-header-cell *matHeaderCellDef> Téléphone </th>
+      <td mat-cell *matCellDef="let element"> {{element.tel}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+<!-- <ul>
+  <li *ngFor="let user of users">
+    <a routerLink="/student/{{user.id}}">{{ user.name }}</a>
+
+    <ul>
+      <li>{{ user.email }}</li>
+      <li>{{ user.tel }}</li>
+    </ul>
+  </li>
+</ul> -->

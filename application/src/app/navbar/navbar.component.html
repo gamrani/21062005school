@@ -1,0 +1,26 @@
+<mat-toolbar color="light">
+  <div  id="content">
+  <mat-toolbar>
+    <a mat-button color="primary" [ngClass]="{'activated':url === '/dashboard'}" (click)="url='/dashboard'" routerLink="dashboard">
+      <i class="material-icons">dashboard</i>
+      Tableau de bord
+    </a>
+    <a mat-button color="primary" [ngClass]="{'activated':url === '/students'}" (click)="url='/students'" routerLink="students">
+       <i class="material-icons">assignment_ind</i>
+       Gestion des étudiants
+    </a>
+    <a mat-button color="primary" [ngClass]="{'activated':url === '/notes'}" (click)="url='/notes'" routerLink="notes">
+      <i class="material-icons">assignment</i>
+      Gestion des notes
+    </a>
+    <a mat-button color="primary" [ngClass]="{'activated':url === '/presences'}" (click)="url='/presences'" routerLink="presences">
+     <i class="material-icons">today</i>
+      Gestion de Présences
+    </a>
+    <a mat-button color="primary" [ngClass]="{'activated':url === '/cours'}" (click)="url='/cours'" routerLink="cours">
+      <i class="material-icons">library_books</i>
+      Gestion des cours
+    </a>
+ </mat-toolbar>
+</div>
+</mat-toolbar>

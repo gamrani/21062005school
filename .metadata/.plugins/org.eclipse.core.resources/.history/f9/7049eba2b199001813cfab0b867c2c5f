@@ -1,0 +1,12 @@
+package com.school.api.batchs;
+
+import com.opencsv.CSVReader;
+public class RWFile {
+
+	public Line readLine() {
+		if(CSVReader=null) {
+			
+		}
+	 return null;
+	}
+}

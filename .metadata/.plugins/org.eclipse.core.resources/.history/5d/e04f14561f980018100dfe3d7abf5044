@@ -1,0 +1,26 @@
+package com.school.api.entities;
+
+public class Student extends User {
+
+	private String cne;
+
+	
+	public Student() {
+		super();
+	}
+
+	public Student(String cne) {
+		super();
+		this.cne = cne;
+	}
+
+	public String getCne() {
+		return cne;
+	}
+
+	public void setCne(String cne) {
+		this.cne = cne;
+	}
+	
+	
+}

@@ -1,0 +1,22 @@
+package com.school.api.batchs;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+
+import com.opencsv.CSVReader;
+import com.opencsv.CSVWriter;
+import com.school.api.entities.Line;
+public class RWFile {
+
+	private CSVReader cvsReader;
+	private CSVWriter csvWriter;
+	private String fileUri;
+	private FileReader fileReader;
+	private FileWriter fileWriter;
+	
+	public Line readLine() {
+	
+		
+	 return null;
+	}
+}
