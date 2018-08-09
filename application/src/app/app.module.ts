@@ -27,6 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { StudentComponent } from './student/student.component';
 import { DataTableComponent } from './data-table/data-table.component';
 import { AddStudentFormComponent } from './add-student-form/add-student-form.component';
+import { ListUploadComponent } from './list-upload/list-upload.component';
+import { FormUploadComponent } from './form-upload/form-upload.component';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { AddStudentFormComponent } from './add-student-form/add-student-form.com
     PresenceComponent,
     StudentComponent,
     DataTableComponent,
-    AddStudentFormComponent
+    AddStudentFormComponent,
+    ListUploadComponent,
+    FormUploadComponent
   ],
   imports: [
     MatDialogModule,
@@ -63,6 +68,6 @@ import { AddStudentFormComponent } from './add-student-form/add-student-form.com
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [AddStudentFormComponent]
+  entryComponents: [AddStudentFormComponent,FormUploadComponent]
 })
 export class AppModule { }

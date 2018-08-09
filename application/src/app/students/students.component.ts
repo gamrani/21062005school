@@ -6,7 +6,7 @@ import {Student} from '../models/student';
 import {DataSource} from '@angular/cdk/collections';
 import {MatDialog, MatDialogConfig} from '@angular/material';
 import { AddStudentFormComponent } from '../add-student-form/add-student-form.component';
-
+import {FormUploadComponent} from '../form-upload/form-upload.component';
 
 @Component({
   selector: 'app-students',
@@ -21,6 +21,14 @@ export class StudentsComponent implements OnInit {
   users : Student[];
   constructor(private studentService:StudentsService,public dialog: MatDialog) { }
   ngOnInit() {
+  }
+
+  importStudent(){
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.disableClose = true;
+    dialogConfig.autoFocus = true;
+    const dialogRef = this.dialog.open(FormUploadComponent, dialogConfig);
   }
 
   openStudentForm():void {

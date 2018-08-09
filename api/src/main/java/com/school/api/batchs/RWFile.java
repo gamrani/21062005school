@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.lang.System.Logger;
+import java.lang.*;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -17,7 +17,6 @@ import org.slf4j.LoggerFactory;
 
 public class RWFile {
 
-	private final Logger logger = (Logger) LoggerFactory.getLogger(FileUtils.class);
 
 	private String fileName;
 	private CSVReader CSVReader;
