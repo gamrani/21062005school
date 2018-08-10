@@ -1,16 +1,52 @@
-<h2 mat-dialog-title>Ajouter un étudiant</h2>
+<h2 mat-dialog-title class="alert alert-info" >Bienvenu dans l'espace d'ajout des étudiants, vous ajoutez un étudiant en saisissant les informations ci-dessous </h2>
+<div class="container">
+    <div *ngIf="showError && (!student.firstName || !student.lastName || !student.age ||!student.sex ||!student.cin || !student.cne ||!student.level)" class="alert alert-danger"> 
+       Veuillez saisir tout les champs en rouge
+    </div>
 
-<mat-dialog-content >
-  
+    <form #studentForm="ngForm">
+      <div class="form-group">
+        <label for="name">Nom de famille</label>
+        <input type="text" class="form-control" id="firstName" placeholder="Exemple : EL GAMRANI" [(ngModel)]="student.firstName" name="firstName" required #spy>   
+    </div>
+      <div class="form-group">
+        <label for="name">Prénom</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Exemple : Youssef" [(ngModel)]="student.lastName" name="lastName" required>
+    </div>
+    <div class="form-group">
+            <label for="name">Date de naissance </label> <br>
     <mat-form-field>
-        <input matInput
-                placeholder="Course Description"
-               formControlName="description">
+            <input matInput  id="age"  [(ngModel)]="student.age " name="age"  [matDatepicker]="picker" placeholder="MM/DD/YYYY">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            {{ student.age  | date:'shortDate'}}
     </mat-form-field>
-
-</mat-dialog-content>
-
-<mat-dialog-actions>
-    <button class="mat-raised-button"(click)="close()">Close</button>
-    <button class="mat-raised-button mat-primary"(click)="save()">Save</button>
-</mat-dialog-actions>
+     </div>
+    
+      <div class="form-group">
+        <label for="name">Sexe</label>
+        <select class="form-control" id="level" [(ngModel)]="student.sex" name="sex" required>
+            <option *ngFor="let sex of sexs" [value]="sex" >{{sex}}</option>
+          </select> 
+      </div>
+      <div class="form-group">
+        <label for="name">CIN</label>
+        <input type="text" class="form-control" id="cin" placeholder="Exemple : AB12345" [(ngModel)]="student.cin" name="cin" required>
+      </div>
+      <div class="form-group">
+        <label for="name">CNE</label>
+        <input type="text" class="form-control" id="cne"placeholder="Exemple : 123456789" [(ngModel)]="student.cne" name="cne" required>
+      </div>
+      <div class="form-group">
+        <label for="name">Niveau d'étude</label>
+        <select class="form-control" id="level" [(ngModel)]="student.level" name="level"required>
+            <option *ngFor="let level of levels" >{{level}}</option>
+        </select>      
+      </div>
+     
+      <button type="submit" class="btn btn-success" (click)="submit()" >Valider</button> &nbsp;
+      <button class="btn btn-danger" (click)="close()">Annuler</button> &nbsp;
+      <button class="btn btn-warning" (click)="reinit();studentForm.reset()">Réinitialiser</button>
+ 
+    </form>
+</div>

@@ -32,7 +32,8 @@ public class User implements Serializable{
 	private String cin;
     @Column
     private int phone;
-	
+	@Column
+    private String sex;
 	
 	public User() {
 		super();

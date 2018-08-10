@@ -29,8 +29,9 @@ import { DataTableComponent } from './data-table/data-table.component';
 import { AddStudentFormComponent } from './add-student-form/add-student-form.component';
 import { ListUploadComponent } from './list-upload/list-upload.component';
 import { FormUploadComponent } from './form-upload/form-upload.component';
-
-
+import { FormsModule } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material';
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,9 +65,12 @@ import { FormUploadComponent } from './form-upload/form-upload.component';
     MatIconModule,
     MatPaginatorModule,
     MatSortModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
-  providers: [],
+  providers: [MatDatepickerModule],
   bootstrap: [AppComponent],
   entryComponents: [AddStudentFormComponent,FormUploadComponent]
 })

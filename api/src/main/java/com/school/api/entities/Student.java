@@ -10,6 +10,8 @@ public class Student extends User {
 
     @Column
 	private String cne;
+    @Column
+    private String level;
 
 	public Student() {
 		super();

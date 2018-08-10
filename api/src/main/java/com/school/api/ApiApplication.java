@@ -11,15 +11,9 @@ import com.school.api.storage.StorageService;
 @SpringBootApplication
 public class ApiApplication {
 	
-	@Resource
-	StorageService storageService;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(ApiApplication.class, args);
 	}
 	
-	public void run(String... arg) throws Exception {
-		storageService.deleteAll();
-		storageService.init();
-	}
 }
